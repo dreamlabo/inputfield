@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>File Uploader</title>
+</head>
+<body>
+    <div class="header-wrapper">    
+        <div class="header-container">
+            <header class="">
+                <h1>Todd Labo</h1>
+            </header>
+        </div>
+    </div>
+    <div class="title-wrapper">
+        <div class="title-container"> 
+            <h2>File Selector</h2>
+        </div>
+    </div>
+    
+    <div class="file-selection-container">
+        <div>
+            <form aria-hidden="true" id="form">
+                <label for="csvFile">Select CSV Source File</label><br>
+                <input id="hidden-file-btn" type="file" name="csvFile" accept=".csv">
+            </form>
+            <div class="fake-form">
+                
+                <div class="fake-file-chooser">
+                    <p id="fake-form-p" class="fake-form--animated-text">ATTACHMENT ADDED</p>
+                    <button id="btn-browse" 
+                            class="fake-file-chooser-btn"
+                            onclick="openFileBrowser()">
+                        Browse...
+                    </button>
+                    <p id="file-name-text">No file selected</p>
+                    <button id="btn-trash-can" class="btn-trash-can">
+                        <img class="trash-can"
+                                onclick="clearSelectedFile()" 
+                                src="/images/trash-1.svg" alt="">
+                    </button>
+                </div>
+                <div class="btn-wrp">
+                    <button>Exit</button>
+                    <button id="nextBtnCsv"
+                            class="btn-next-csv"
+                            disabled>
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
