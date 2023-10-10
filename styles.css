@@ -28,6 +28,12 @@ body {
     max-width: 1700px;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header-container h1 {
     font-size: 1.3rem;
     font-weight: 500;
