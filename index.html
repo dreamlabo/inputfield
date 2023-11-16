@@ -12,13 +12,13 @@
         <div class="header-container">
             <header class="flex">
                 <h1>Todd Labo</h1>
-                <h1>toddlabo@gmail.com</h1>
+                <h2>toddlabo@gmail.com</h1>
             </header>
         </div>
     </div>
     <div class="title-wrapper">
         <div class="title-container"> 
-            <h2>File Selector</h2>
+            <h3>File Selector</h2>
         </div>
     </div>
     
@@ -30,30 +30,27 @@
             </form>
             <div class="fake-form">
                 <div class="fake-file-chooser">
-                    <p id="fake-form-p" class="fake-form--animated-text">ATTACHMENT ADDED</p>
                     <button id="btn-browse" 
-                            class="fake-file-chooser-btn"
-                            onclick="openFileBrowser()">
+                        class="fake-file-chooser-btn"
+                        onclick="openFileBrowser()">
                         Browse...
                     </button>
-                    <p id="file-name-text">No file selected</p>
-                    <button id="btn-trash-can" class="btn-trash-can">
-                        <img class="trash-can"
-                                onclick="clearSelectedFile()" 
-                                src="images/trash-1.svg" alt="">
+                    <p id="file-name-text" class="file-name-text">No CSV file selected</p>
+                    <button onclick="clearSelectedFile()" id="btn-trash-can" class="btn-trash-can">
+                        <img aria-hidden="true" class="trash-can"
+                        src="images/trash-1.svg" alt="">
                     </button>
+                    <p aria-hidden="true" id="fake-form-p" class="fake-form--animated-text">CSV ATTACHMENT ADDED</p>
                 </div>
                 <div class="btn-wrp">
-                    <button>Exit</button>
-                    <button id="nextBtnCsv"
-                            class="btn-next-csv"
-                            disabled>
-                        Next
-                    </button>
+                    <button class="btn-next-csv">Exit</button>
+                    <button id="nextBtnCsv" class="btn-next-csv" disabled >Next</button>
                 </div>
             </div>
         </div>
     </div>
+
+
     
 </body>
 </html>
