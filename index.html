@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple input field that lets a user upload a csv file.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/c43c1a8058.js" crossorigin="anonymous"></script>
     <script src="scripts.js" defer></script>
     <title>File Uploader</title>
 </head>
@@ -16,39 +21,47 @@
             </header>
         </div>
     </div>
-    <div class="title-wrapper">
-        <div class="title-container"> 
-            <h3>File Selector</h2>
+    <div class="main-wrapper">
+    <main class="main-container">
+       
+        <div class="title-wrapper">
+            <div class="title-container"> 
+                <h3>File Selector</h2>
+            </div>
         </div>
-    </div>
-    
-    <div class="file-selection-container">
-        <div>
-            <form aria-hidden="true" id="form">
-                <label for="csvFile">Select CSV Source File</label><br>
-                <input id="hidden-file-btn" type="file" name="csvFile" accept=".csv">
-            </form>
-            <div class="fake-form">
-                <div class="fake-file-chooser">
-                    <button id="btn-browse" 
-                        class="fake-file-chooser-btn"
-                        onclick="openFileBrowser()">
-                        Browse...
-                    </button>
-                    <p id="file-name-text" class="file-name-text">No CSV file selected</p>
-                    <button onclick="clearSelectedFile()" id="btn-trash-can" class="btn-trash-can">
-                        <img aria-hidden="true" class="trash-can"
-                        src="images/trash-1.svg" alt="">
-                    </button>
-                    <p aria-hidden="true" id="fake-form-p" class="fake-form--animated-text">CSV ATTACHMENT ADDED</p>
-                </div>
-                <div class="btn-wrp">
-                    <button class="btn-next-csv">Exit</button>
-                    <button id="nextBtnCsv" class="btn-next-csv" disabled >Next</button>
+        
+        <div class="file-selection-container">
+            <div>
+                <form aria-hidden="true" id="form">
+                    <label for="csvFile">Select CSV Source File</label><br>
+                    <input id="hidden-file-btn" type="file" name="csvFile" accept=".csv">
+                </form>
+                <div class="fake-form">
+                    <div class="fake-file-chooser">
+                        <button id="btn-browse" 
+                            class="fake-file-chooser-btn"
+                            onclick="openFileBrowser()"
+                            aria-label="Open folder to select a csv file">
+                            Browse...
+                        </button>
+                        <p id="file-name-text" class="file-name-text">No CSV file selected</p>
+                        <button aria-label="Clear the selected CSV file from the form" onclick="clearSelectedFile()" id="btn-trash-can" class="btn-trash-can">
+                            <div class="large-trash"><i class="fa-solid fa-trash-can fa-xl"></i></div>
+                            <div class="small-trash"><i class="fa-solid fa-trash-can"></i></div>
+                        </button>
+                        <p aria-hidden="true" id="fake-form-p" class="fake-form--animated-text">CSV ATTACHMENT ADDED</p>
+                    </div>
+                    <div class="btn-wrp">
+                        <button class="btn-next-csv">Exit</button>
+                        <button id="nextBtnCsv" class="btn-next-csv" disabled >Next</button>
+                    </div>
+                    <button id="toggle-button" onclick="toggleColorTheme()" class="btn-toggle">Switch to light mode</button>
                 </div>
             </div>
         </div>
-    </div>
+      
+    </main>
+</div>
 
 
     
